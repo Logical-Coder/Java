@@ -1,13 +1,14 @@
 package dev.praveen.productservice.services;
 
-import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
+import dev.praveen.productservice.models.Product;
+
+import java.util.List;
 
 
 public interface CategoryService {
 
-    public String GetAllCategories();
+    public List<String> GetAllCategories();
 
-    public String GetProductsInCategories(Long categoryid);
+    public List<Product> GetProductsInCategories(String categoryid);
 
 }

@@ -1,23 +1,24 @@
 package dev.praveen.productservice.services;
 
 import dev.praveen.productservice.dtos.ProductDto;
+import dev.praveen.productservice.models.Product;
 
-import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.*;
+import java.util.List;
 
 public interface ProductService {
-    public String GetAllProducts();
+    List<Product> GetAllProducts();
 
 
-    public String GetSingleProducts( Long productId);
+    Product GetSingleProducts(Long productId);
+
+    Product AddNewProducts(
+            ProductDto product
+    );
 
 
-    public String AddNewProducts( ProductDto productDto);
+    String UpdateProduct(Long productid,Product product);
 
 
-    String UpdateProduct( Long id);
-
-
-    String DeleteProduct( Long id);
+    boolean DeleteProduct( Long id);
 }
 
